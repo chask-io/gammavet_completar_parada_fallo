@@ -1,0 +1,16 @@
+{
+  "function_name": "CompletarParadaFalloFn",
+  "test_type": "operator_params",
+  "args": {},
+  "widget_params": {},
+  "prompt": "El conductor 56964379348 dijo 'no pude retirar, la clinica estaba cerrada' para route_stop_id 053c16af-21c1-4da4-b6f4-7aa870d7f112 y pickup_order_id e25eba8d-6e7e-45e6-a19e-f565118da77f. Debes registrar un fallo real con esa nota.",
+  "event_type": "function_call",
+  "extra_params": {
+    "is_operator_params_test": true
+  },
+  "files": [],
+  "metadata": {
+    "description": "Operator extracts exact failure parameters without accion",
+    "expected_status": "success"
+  }
+}
