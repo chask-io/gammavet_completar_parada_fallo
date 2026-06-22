@@ -16,20 +16,22 @@ function:
     writes:
       - table: gammavet_test.route_stops
         mode: update
-        columns: [status, observations, updated_at]
+        columns: [status, actual_arrival_at, observations, updated_at]
       - table: gammavet_test.pickup_orders
         mode: update
-        columns: [status, completed, failure_reason, observations, updated_at]
+        columns: [status, completed, picked_up_at, response_seconds, failure_reason, observations, updated_at]
       - table: gammavet_test.dispatch_events
         mode: insert
-        columns: [event_type, actor_lambda, route_stop_id, pickup_order_id, metadata]
+        columns: [event_type, actor_lambda, driver_id, pickup_order_id, route_id, route_stop_id, orchestration_event_uuid, metadata]
     reads:
       - table: gammavet_test.route_stops
-        columns: [id, route_id, pickup_order_id, status]
+        columns: [id, route_id, pickup_order_id, stop_number, queue_position, clinic_id, clinic_name_snapshot, address_snapshot, comuna_snapshot, zone_snapshot, maps_url_snapshot, observations, estimated_arrival_at, started_at, actual_arrival_at, status, ticket_id, source_spreadsheet_id, source_sheet_name, source_sheet_row, created_at, updated_at]
       - table: gammavet_test.routes
-        columns: [id, driver_id]
+        columns: [id, driver_id, route_date, route_code, driver_name_snapshot]
       - table: gammavet_test.drivers
         columns: [id, phone, normalized_phone]
+      - table: gammavet_test.pickup_orders
+        columns: [id, requested_at]
     rpc:
       - POST /api/gammavet/route-stops/fail-current
 
