@@ -133,6 +133,13 @@ class ConductorContext:
             or self.runtime.tenant_branch_default
         )
         slug = os.environ.get("TENANT_SLUG") or self.runtime.tenant_slug_default
+        logger.info(
+            "TenantDataClient config branch=%s slug=%s lambda_uuid=%s access_token_present=%s",
+            branch,
+            slug,
+            self.function_uuid(),
+            bool(getattr(self.evento_orquestacion, "access_token", None)),
+        )
         client = TenantDataClient(
             org_uuid=self.evento_orquestacion.organization.organization_id,
             branch=branch,
