@@ -3,14 +3,14 @@
   "test_type": "operator_params",
   "args": {},
   "widget_params": {},
-  "prompt": "El conductor 56964379348 dijo 'no pude retirar, la clinica estaba cerrada' para route_stop_id 053c16af-21c1-4da4-b6f4-7aa870d7f112 y pickup_order_id e25eba8d-6e7e-45e6-a19e-f565118da77f. Debes registrar un fallo real con esa nota.",
+  "prompt": "El conductor +56900000000 dijo 'no pude retirar, la clinica estaba cerrada', pero esta prueba de publicacion no tiene una parada activa ni route_stop_id. Registra la nota sin IDs exactos para validar el handoff terminal no mutante.",
   "event_type": "function_call",
   "extra_params": {
     "is_operator_params_test": true
   },
   "files": [],
   "metadata": {
-    "description": "Operator extracts exact failure parameters without accion",
+    "description": "Operator publish gate: no active stop terminal handoff for fallo without accion",
     "expected_status": "success"
   }
 }

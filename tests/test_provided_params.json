@@ -2,10 +2,8 @@
   "function_name": "CompletarParadaFalloFn",
   "test_type": "provided_params",
   "args": {
-    "nota": "Clinica cerrada, no pude retirar",
-    "route_stop_id": "053c16af-21c1-4da4-b6f4-7aa870d7f112",
-    "pickup_order_id": "e25eba8d-6e7e-45e6-a19e-f565118da77f",
-    "driver_phone": "+56964379348"
+    "nota": "Clinica cerrada, prueba sin parada activa",
+    "driver_phone": "+56900000000"
   },
   "widget_params": {},
   "prompt": "",
@@ -13,7 +11,7 @@
   "extra_params": {},
   "files": [],
   "metadata": {
-    "description": "Fail the exact Crubvet stop with a genuine failure reason",
+    "description": "Non-mutating publish gate: no active stop terminal handoff for fallo",
     "expected_status": "success"
   }
 }
