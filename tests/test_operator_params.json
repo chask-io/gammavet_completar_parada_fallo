@@ -3,7 +3,7 @@
   "test_type": "operator_params",
   "args": {},
   "widget_params": {},
-  "prompt": "El conductor +56900000000 dijo 'no pude retirar, la clinica estaba cerrada', pero esta prueba de publicacion no tiene una parada activa ni route_stop_id. Registra la nota sin IDs exactos para validar el handoff terminal no mutante.",
+  "prompt": "El conductor +56900000000 dijo 'no pude retirar, la clinica estaba cerrada'. Llama CompletarParadaFalloFn con nota='no pude retirar, la clinica estaba cerrada' y driver_phone='+56900000000'. No incluyas route_stop_id ni pickup_order_id; esta prueba valida el handoff terminal no mutante sin parada activa.",
   "event_type": "function_call",
   "extra_params": {
     "is_operator_params_test": true
