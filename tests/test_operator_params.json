@@ -1,7 +1,10 @@
 {
   "function_name": "CompletarParadaFalloFn",
   "test_type": "operator_params",
-  "args": {},
+  "args": {
+    "nota": "no pude retirar, la clinica estaba cerrada",
+    "driver_phone": "+56900000000"
+  },
   "widget_params": {},
   "prompt": "El conductor +56900000000 dijo 'no pude retirar, la clinica estaba cerrada'. Llama CompletarParadaFalloFn con nota='no pude retirar, la clinica estaba cerrada' y driver_phone='+56900000000'. No incluyas route_stop_id ni pickup_order_id; esta prueba valida el handoff terminal no mutante sin parada activa.",
   "event_type": "function_call",
