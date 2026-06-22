@@ -25,7 +25,7 @@ logger.setLevel(logging.INFO)
 
 RUNTIME = ConductorRuntime(
     actor_lambda="gammavet_completar_parada_fallo",
-    function_uuid_default="00000000-0000-4000-8000-000000000002",
+    function_uuid_default="22e7d25c-855e-4b5e-909c-ebe61d190e4a",
 )
 
 
