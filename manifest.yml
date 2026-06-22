@@ -31,7 +31,7 @@ function:
       - table: gammavet_test.drivers
         columns: [id, phone, normalized_phone]
       - table: gammavet_test.pickup_orders
-        columns: [id, requested_at]
+        columns: [id, requested_at, picked_up_at, response_seconds, observations, failure_reason]
     rpc:
       - POST /api/gammavet/route-stops/fail-current
 
