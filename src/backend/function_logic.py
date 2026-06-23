@@ -53,6 +53,12 @@ class FunctionBackend:
             raise ValueError("CompletarParadaFalloFn requiere nota o failure_reason")
 
         resolved = self.context.resolve_route_stop_ids()
+        if not resolved.route_stop_id:
+            return self.context.completion_missing_route_stop_terminal(
+                action_name="completar_parada_fallo",
+                outcome=ESTADO_FALLO,
+            )
+
         payload = self.context.build_driver_action_payload()
         if resolved.route_stop_id:
             payload["route_stop_id"] = resolved.route_stop_id
